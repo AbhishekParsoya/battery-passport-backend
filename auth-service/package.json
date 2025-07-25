@@ -2,7 +2,9 @@
   "name": "auth-service",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "lint": "eslint .",
+    "test": "echo \"No tests yet\" && exit 0"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
