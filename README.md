@@ -35,7 +35,7 @@ A scalable Node.js microservices backend for managing Battery Passports, Documen
 ### 🔧 1. Clone the Repo & Start Services
 
 ```bash
-git clone https://github.com/your-username/battery-passport-backend.git
+git clone https://github.com/AbhishekParsoya/battery-passport-backend.git
 cd battery-passport-backend
 docker-compose up --build
 ````
