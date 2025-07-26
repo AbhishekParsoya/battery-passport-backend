@@ -1,28 +1,42 @@
 const express = require('express');
 const multer = require('multer');
-const s3 = require('../s3');
+const { v4: uuidv4 } = require('uuid');
 const auth = require('../middlewares/auth');
 const Document = require('../models/Document');
-const { v4: uuidv4 } = require('uuid');
 
-const upload = multer({ storage: multer.memoryStorage() });
 const router = express.Router();
+const upload = multer({ storage: multer.memoryStorage() });
 
 const BUCKET = process.env.S3_BUCKET;
+const USE_S3 = process.env.USE_S3 === 'true'; // true for dev, false for deployed mock
+const s3 = USE_S3 ? require('../s3') : null;
 
 // Upload
 router.post('/upload', auth, upload.single('file'), async (req, res) => {
   const file = req.file;
   const s3Key = `${uuidv4()}-${file.originalname}`;
 
-  await s3.putObject({
-    Bucket: BUCKET,
-    Key: s3Key,
-    Body: file.buffer
-  }).promise();
+  if (USE_S3) {
+    await s3.putObject({
+      Bucket: BUCKET,
+      Key: s3Key,
+      Body: file.buffer
+    }).promise();
+  }
 
-  const doc = await Document.create({ fileName: file.originalname, s3Key });
-  res.json({ docId: doc._id, fileName: doc.fileName, createdAt: doc.createdAt });
+  const doc = await Document.create({
+    fileName: file.originalname,
+    s3Key,
+    url: USE_S3
+      ? null
+      : `https://dummy-storage.com/uploads/${s3Key}` // mock URL
+  });
+
+  res.json({
+    docId: doc._id,
+    fileName: doc.fileName,
+    createdAt: doc.createdAt
+  });
 });
 
 // Get Download Link
@@ -30,11 +44,17 @@ router.get('/:docId', auth, async (req, res) => {
   const doc = await Document.findById(req.params.docId);
   if (!doc) return res.status(404).json({ message: 'Not found' });
 
-  const url = s3.getSignedUrl('getObject', {
-    Bucket: BUCKET,
-    Key: doc.s3Key,
-    Expires: 60 * 5
-  });
+  let url;
+
+  if (USE_S3) {
+    url = s3.getSignedUrl('getObject', {
+      Bucket: BUCKET,
+      Key: doc.s3Key,
+      Expires: 60 * 5
+    });
+  } else {
+    url = doc.url || `https://dummy-storage.com/uploads/${doc.s3Key}`;
+  }
 
   res.json({ downloadUrl: url });
 });
@@ -44,24 +64,27 @@ router.delete('/:docId', auth, async (req, res) => {
   const doc = await Document.findByIdAndDelete(req.params.docId);
   if (!doc) return res.status(404).json({ message: 'Not found' });
 
-  await s3.deleteObject({ Bucket: BUCKET, Key: doc.s3Key }).promise();
+  if (USE_S3) {
+    await s3.deleteObject({ Bucket: BUCKET, Key: doc.s3Key }).promise();
+  }
+
   res.json({ message: 'Deleted' });
 });
 
 // Update
 router.put('/:docId', auth, async (req, res) => {
-    const { fileName } = req.body;
-    const doc = await Document.findByIdAndUpdate(
-      req.params.docId,
-      { fileName },
-      { new: true }
-    );
-    if (!doc) return res.status(404).json({ message: 'Not found' });
-    res.json(doc);
-  });
+  const { fileName } = req.body;
+  const doc = await Document.findByIdAndUpdate(
+    req.params.docId,
+    { fileName },
+    { new: true }
+  );
+  if (!doc) return res.status(404).json({ message: 'Not found' });
+
+  res.json(doc);
+});
 
 module.exports = router;
-
 
 
 
