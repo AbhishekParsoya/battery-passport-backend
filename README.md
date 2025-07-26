@@ -181,7 +181,35 @@ battery-passport-backend/
 * Each service has its own Swagger UI
 * Auth is JWT-based with role-level permissions
 
+
+
+Absolutely! Here's a complete section for your `README.md` that documents the **Render deployment links**, and clearly states that **Kafka and S3 (MinIO)** are **not supported** on Render but the services **degrade gracefully** without errors.
+
 ---
+
+### 🚀 Deployed Services on Render
+
+| Service                  | Description                               | Render URL                                                    |
+| ------------------------ | ----------------------------------------- | ------------------------------------------------------------- |
+| **Auth Service**         | Handles user registration, login & tokens | [auth-service](https://battery-passport-backend.onrender.com) |
+| **Passport Service**     | Manages Battery Passport data             | [passport Service](https://passport-service.onrender.com)                                                 |
+| **Document Service**     | Uploads, downloads, and updates documents | [document-service](https://document-service-coxt.onrender.com)                                                 |
+| **Notification Service** | Listens to Kafka events and logs activity | [notification-service]( https://notification-service-l2c2.onrender.com)                 |
+
+---
+
+### ⚠️ Deployment Notes
+
+* **Kafka is not supported on Render:**
+  Kafka-based services (e.g., Notification Service) are disabled in production using `NODE_ENV=production`. These services **do not crash** but **skip Kafka setup gracefully**.
+
+* **MinIO/S3 is not supported on Render:**
+  Since MinIO is container-based and cannot run natively on Render, the **Document Service** disables S3 storage when `NODE_ENV !== development`. No errors are thrown, and API endpoints return appropriate fallback responses.
+
+* You can use **Confluent Cloud for Kafka** or **Amazon S3** if you want to extend these features to production in the future.
+
+---
+
 
 ## ✅ Future Enhancements
 
@@ -192,23 +220,3 @@ battery-passport-backend/
 * [ ] Centralized logging (Winston + ELK stack)
 
 ---
-
-## 🤝 Contributing
-
-Feel free to fork and raise PRs. Suggestions and improvements are always welcome!
-
----
-
-## 📄 License
-
-MIT © 2025 Your Name
-
-```
-
----
-
-Let me know if you'd like to include:
-- A diagram
-- Your real name or GitHub link
-- Service-by-service breakdown in separate docs
-```
