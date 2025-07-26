@@ -1,0 +1,1382 @@
+{
+	"info": {
+		"_postman_id": "a0d135ce-69aa-4918-a208-2dc2c7b715de",
+		"name": "Battery-Passport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25088427"
+	},
+	"item": [
+		{
+			"name": "Auth-Service",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"user11@example.com\",\n    \"password\": \"admin123\"\n    //\"role\": \"admin\"\n}"
+						},
+						"url": {
+							"raw": "{{Auth-Service}}/api/auth/register",
+							"host": [
+								"{{Auth-Service}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:4000/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin111@example.com\",\n    \"password\": \"admin123\",\n    \"role\": \"admin\"\n}"
+								},
+								"url": {
+									"raw": "https://battery-passport-backend.onrender.com/api/auth/register",
+									"protocol": "https",
+									"host": [
+										"battery-passport-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:39:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"2b-HysgJ/5vjhV0UttQdVY7wQ4LK5s\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "a3e233e6-a3ba-4564"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96560474f8647adf-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully.\"\n}"
+						},
+						{
+							"name": "http://localhost:4000/api/auth/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"user11@example.com\",\n    \"password\": \"admin123\"\n    //\"role\": \"admin\"\n}"
+								},
+								"url": {
+									"raw": "https://battery-passport-backend.onrender.com/api/auth/register",
+									"protocol": "https",
+									"host": [
+										"battery-passport-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:40:01 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"2b-HysgJ/5vjhV0UttQdVY7wQ4LK5s\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "a95fed90-9975-4eb9"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "965605e37b7d7adf-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"admin123\"\n}"
+						},
+						"url": {
+							"raw": "{{Auth-Service}}/api/auth/login",
+							"host": [
+								"{{Auth-Service}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "http://localhost:4000/api/auth/login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@example.com\",\n    \"password\": \"admin123\"\n}"
+								},
+								"url": {
+									"raw": "https://battery-passport-backend.onrender.com/api/auth/login",
+									"protocol": "https",
+									"host": [
+										"battery-passport-backend",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:40:25 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"cb-cOlDdjOLxvaKUs5B4AKsKN1zo0Y\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "27b407c5-179e-4a85"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96560678ad3f7adf-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODRhZTc5OGRiMTBkYTg1M2JhZTkwMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzU1NTIyNSwiZXhwIjoxNzUzNTU4ODI1fQ.LcR8wB1bGTSH57ToW6lgFJJT69JvEHfCcfsVHXGes0w\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Passport-Service",
+			"item": [
+				{
+					"name": "create Passport",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n      \"generalInformation\": {\n        \"batteryIdentifier\": \"BP-2024-011ee\",\n        \"batteryModel\": {\n          \"id\": \"LM3-BAT-2024\",\n          \"modelName\": \"GMC WZX1\"\n        },\n        \"batteryMass\": 450,\n        \"batteryCategory\": \"EV\",\n        \"batteryStatus\": \"Original\",\n        \"manufacturingDate\": \"2024-01-15\",\n        \"manufacturingPlace\": \"Gigafactory Nevada\",\n        \"warrantyPeriod\": \"8\",\n        \"manufacturerInformation\": {\n          \"manufacturerName\": \"Tesla Inc\",\n          \"manufacturerIdentifier\": \"TESLA-001\"\n        }\n      },\n      \"materialComposition\": {\n        \"batteryChemistry\": \"LiFePO4\",\n        \"criticalRawMaterials\": [\"Lithium\", \"Iron\"],\n        \"hazardousSubstances\": [{\n          \"substanceName\": \"Lithium Hexafluorophosphate\",\n          \"chemicalFormula\": \"LiPF6\",\n          \"casNumber\": \"21324-40-3\"\n        }]\n      },\n      \"carbonFootprint\": {\n        \"totalCarbonFootprint\": 850,\n        \"measurementUnit\": \"kg CO2e\",\n        \"methodology\": \"Life Cycle Assessment (LCA)\"\n      }\n    }\n  }"
+						},
+						"url": {
+							"raw": "{{Passport-Service}}/api/passports",
+							"host": [
+								"{{Passport-Service}}"
+							],
+							"path": [
+								"api",
+								"passports"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create Passport",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n      \"generalInformation\": {\n        \"batteryIdentifier\": \"BP-2024-011ee\",\n        \"batteryModel\": {\n          \"id\": \"LM3-BAT-2024\",\n          \"modelName\": \"GMC WZX1\"\n        },\n        \"batteryMass\": 450,\n        \"batteryCategory\": \"EV\",\n        \"batteryStatus\": \"Original\",\n        \"manufacturingDate\": \"2024-01-15\",\n        \"manufacturingPlace\": \"Gigafactory Nevada\",\n        \"warrantyPeriod\": \"8\",\n        \"manufacturerInformation\": {\n          \"manufacturerName\": \"Tesla Inc\",\n          \"manufacturerIdentifier\": \"TESLA-001\"\n        }\n      },\n      \"materialComposition\": {\n        \"batteryChemistry\": \"LiFePO4\",\n        \"criticalRawMaterials\": [\"Lithium\", \"Iron\"],\n        \"hazardousSubstances\": [{\n          \"substanceName\": \"Lithium Hexafluorophosphate\",\n          \"chemicalFormula\": \"LiPF6\",\n          \"casNumber\": \"21324-40-3\"\n        }]\n      },\n      \"carbonFootprint\": {\n        \"totalCarbonFootprint\": 850,\n        \"measurementUnit\": \"kg CO2e\",\n        \"methodology\": \"Life Cycle Assessment (LCA)\"\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "https://passport-service.onrender.com/api/passports",
+									"protocol": "https",
+									"host": [
+										"passport-service",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"passports"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:44:26 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "455"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"320-/MwxyYAD4v23JtXZkgps9NiMsQA\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "03c9a7bc-ac38-4096"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96560c602bf2ff6f-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"generalInformation\": {\n            \"batteryIdentifier\": \"BP-2024-011ee\",\n            \"batteryModel\": {\n                \"id\": \"LM3-BAT-2024\",\n                \"modelName\": \"GMC WZX1\"\n            },\n            \"batteryMass\": 450,\n            \"batteryCategory\": \"EV\",\n            \"batteryStatus\": \"Original\",\n            \"manufacturingDate\": \"2024-01-15\",\n            \"manufacturingPlace\": \"Gigafactory Nevada\",\n            \"warrantyPeriod\": \"8\",\n            \"manufacturerInformation\": {\n                \"manufacturerName\": \"Tesla Inc\",\n                \"manufacturerIdentifier\": \"TESLA-001\"\n            }\n        },\n        \"materialComposition\": {\n            \"batteryChemistry\": \"LiFePO4\",\n            \"criticalRawMaterials\": [\n                \"Lithium\",\n                \"Iron\"\n            ],\n            \"hazardousSubstances\": [\n                {\n                    \"substanceName\": \"Lithium Hexafluorophosphate\",\n                    \"chemicalFormula\": \"LiPF6\",\n                    \"casNumber\": \"21324-40-3\",\n                    \"_id\": \"6885220a18b12ad0b1da31bb\"\n                }\n            ]\n        },\n        \"carbonFootprint\": {\n            \"totalCarbonFootprint\": 850,\n            \"measurementUnit\": \"kg CO2e\",\n            \"methodology\": \"Life Cycle Assessment (LCA)\"\n        }\n    },\n    \"_id\": \"6885220a18b12ad0b1da31ba\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Passport Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{Passport-Service}}/api/passports/6885220a18b12ad0b1da31ba",
+							"host": [
+								"{{Passport-Service}}"
+							],
+							"path": [
+								"api",
+								"passports",
+								"6885220a18b12ad0b1da31ba"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Passport Details",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									}
+								],
+								"url": {
+									"raw": "https://passport-service.onrender.com/api/passports/6885220a18b12ad0b1da31ba",
+									"protocol": "https",
+									"host": [
+										"passport-service",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"passports",
+										"6885220a18b12ad0b1da31ba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:45:05 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"320-SAb94HQb/mWE02Ke9Fcv4DTDrbA\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "3d8bbb20-772f-4e8a"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96560d500b2dff6f-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"generalInformation\": {\n            \"batteryModel\": {\n                \"id\": \"LM3-BAT-2024\",\n                \"modelName\": \"GMC WZX1\"\n            },\n            \"manufacturerInformation\": {\n                \"manufacturerName\": \"Tesla Inc\",\n                \"manufacturerIdentifier\": \"TESLA-001\"\n            },\n            \"batteryIdentifier\": \"BP-2024-011ee\",\n            \"batteryMass\": 450,\n            \"batteryCategory\": \"EV\",\n            \"batteryStatus\": \"Original\",\n            \"manufacturingDate\": \"2024-01-15\",\n            \"manufacturingPlace\": \"Gigafactory Nevada\",\n            \"warrantyPeriod\": \"8\"\n        },\n        \"materialComposition\": {\n            \"batteryChemistry\": \"LiFePO4\",\n            \"criticalRawMaterials\": [\n                \"Lithium\",\n                \"Iron\"\n            ],\n            \"hazardousSubstances\": [\n                {\n                    \"substanceName\": \"Lithium Hexafluorophosphate\",\n                    \"chemicalFormula\": \"LiPF6\",\n                    \"casNumber\": \"21324-40-3\",\n                    \"_id\": \"6885220a18b12ad0b1da31bb\"\n                }\n            ]\n        },\n        \"carbonFootprint\": {\n            \"totalCarbonFootprint\": 850,\n            \"measurementUnit\": \"kg CO2e\",\n            \"methodology\": \"Life Cycle Assessment (LCA)\"\n        }\n    },\n    \"_id\": \"6885220a18b12ad0b1da31ba\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Passport",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\": {\n      \"generalInformation\": {\n        \"batteryIdentifier\": \"BP-2024-011-EDIT\"\n      }\n    }\n  }"
+						},
+						"url": {
+							"raw": "{{Passport-Service}}/api/passports/6885220a18b12ad0b1da31ba",
+							"host": [
+								"{{Passport-Service}}"
+							],
+							"path": [
+								"api",
+								"passports",
+								"6885220a18b12ad0b1da31ba"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Passport",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n      \"generalInformation\": {\n        \"batteryIdentifier\": \"BP-2024-011-EDIT\"\n      }\n    }\n  }"
+								},
+								"url": {
+									"raw": "https://passport-service.onrender.com/api/passports/6885220a18b12ad0b1da31ba",
+									"protocol": "https",
+									"host": [
+										"passport-service",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"passports",
+										"6885220a18b12ad0b1da31ba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:45:53 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "150"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"bc-Lc8YsbSzQa3mHQGIh+bCk6wvpDU\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "193f6d52-9725-438b"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96560e80bf0eff6f-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"generalInformation\": {\n            \"batteryIdentifier\": \"BP-2024-011-EDIT\"\n        },\n        \"materialComposition\": {\n            \"criticalRawMaterials\": [],\n            \"hazardousSubstances\": []\n        }\n    },\n    \"_id\": \"6885220a18b12ad0b1da31ba\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Passport",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{Passport-Service}}/api/passports/6885220a18b12ad0b1da31ba",
+							"host": [
+								"{{Passport-Service}}"
+							],
+							"path": [
+								"api",
+								"passports",
+								"6885220a18b12ad0b1da31ba"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Passport",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									}
+								],
+								"url": {
+									"raw": "https://passport-service.onrender.com/api/passports/6885220a18b12ad0b1da31ba",
+									"protocol": "https",
+									"host": [
+										"passport-service",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"passports",
+										"6885220a18b12ad0b1da31ba"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:46:50 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"15-05sALxLwT1ik9/qZK2sYw2X1co4\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "20703f8d-1779-4fda"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96560fe4e9a3ff6f-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Document-Service",
+			"item": [
+				{
+					"name": "Upload Document",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/abhishek.parsoya/Downloads/dummy (1).pdf"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{Document-Service}}/api/documents/upload",
+							"host": [
+								"{{Document-Service}}"
+							],
+							"path": [
+								"api",
+								"documents",
+								"upload"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload Document",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/Users/abhishek.parsoya/Downloads/dummy (1).pdf"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://document-service-coxt.onrender.com/api/documents/upload",
+									"protocol": "https",
+									"host": [
+										"document-service-coxt",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"documents",
+										"upload"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 11:32:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"66-pp+TrY3kVyCHQidJ5ITyjXzAPxs\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "42ea735e-af9d-400b"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "965393d729ad0ac9-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"docId\": \"6884bcd670ff77daf7c8b754\",\n    \"fileName\": \"dummy (1).pdf\",\n    \"createdAt\": \"2025-07-26T11:32:38.345Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Download Link for Document",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{Document-Service}}/api/documents/6884bcd670ff77daf7c8b754",
+							"host": [
+								"{{Document-Service}}"
+							],
+							"path": [
+								"api",
+								"documents",
+								"6884bcd670ff77daf7c8b754"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Download Link for Document",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									}
+								],
+								"url": {
+									"raw": "https://document-service-coxt.onrender.com/api/documents/6884bcd670ff77daf7c8b754",
+									"protocol": "https",
+									"host": [
+										"document-service-coxt",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"documents",
+										"6884bcd670ff77daf7c8b754"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:48:03 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "89"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"66-xLOisUxqoRSdx9MTr+doXuzIAhk\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "27b9fce9-1446-4c79"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "965611a95bc6ad1c-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"downloadUrl\": \"https://dummy-storage.com/uploads/e0595e30-724f-4c62-97ac-2c227db703fe-dummy (1).pdf\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Document",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"fileName\": \"renamed_file.pdf\"}"
+						},
+						"url": {
+							"raw": "{{Document-Service}}/api/documents/6884bcd670ff77daf7c8b754",
+							"host": [
+								"{{Document-Service}}"
+							],
+							"path": [
+								"api",
+								"documents",
+								"6884bcd670ff77daf7c8b754"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Document",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"fileName\": \"renamed_file.pdf\"}"
+								},
+								"url": {
+									"raw": "https://document-service-coxt.onrender.com/api/documents/6884bcd670ff77daf7c8b754",
+									"protocol": "https",
+									"host": [
+										"document-service-coxt",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"documents",
+										"6884bcd670ff77daf7c8b754"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:48:36 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"ac-4EIiSfmnA7nTtwKc4Zkx3iBOe0c\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "b450e39c-9f1f-4806"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "96561275890cad1c-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"6884bcd670ff77daf7c8b754\",\n    \"fileName\": \"renamed_file.pdf\",\n    \"s3Key\": \"e0595e30-724f-4c62-97ac-2c227db703fe-dummy (1).pdf\",\n    \"createdAt\": \"2025-07-26T11:32:38.345Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Document",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}"
+							}
+						],
+						"url": {
+							"raw": "{{Document-Service}}/api/documents/6884bcd670ff77daf7c8b754",
+							"host": [
+								"{{Document-Service}}"
+							],
+							"path": [
+								"api",
+								"documents",
+								"6884bcd670ff77daf7c8b754"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Document",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}"
+									}
+								],
+								"url": {
+									"raw": "https://document-service-coxt.onrender.com/api/documents/6884bcd670ff77daf7c8b754",
+									"protocol": "https",
+									"host": [
+										"document-service-coxt",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"documents",
+										"6884bcd670ff77daf7c8b754"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 26 Jul 2025 18:49:14 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "etag",
+									"value": "W/\"15-05sALxLwT1ik9/qZK2sYw2X1co4\""
+								},
+								{
+									"key": "rndr-id",
+									"value": "8d770100-f4e3-4235"
+								},
+								{
+									"key": "vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "cf-cache-status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "CF-RAY",
+									"value": "9656136498b6ad1c-BOM"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"c"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Auth-Service",
+			"value": "https://battery-passport-backend.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "Passport-Service",
+			"value": "https://passport-service.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "Document-Service",
+			"value": "https://document-service-coxt.onrender.com",
+			"type": "string"
+		},
+		{
+			"key": "TOKEN",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODRhZTc5OGRiMTBkYTg1M2JhZTkwMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzU1NTIyNSwiZXhwIjoxNzUzNTU4ODI1fQ.LcR8wB1bGTSH57ToW6lgFJJT69JvEHfCcfsVHXGes0w",
+			"type": "string"
+		}
+	]
+}
