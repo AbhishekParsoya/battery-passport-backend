@@ -56,12 +56,22 @@ Each service accepts:
 
 | Service          | Swagger UI                                                       |
 | ---------------- | ---------------------------------------------------------------- |
-| Auth Service     | [http://localhost:4000/api-docs](http://localhost:4000/api-docs) |
-| Passport Service | [http://localhost:4001/api-docs](http://localhost:4001/api-docs) |
-| Document Service | [http://localhost:4002/api-docs](http://localhost:4002/api-docs) |
+| Auth Service     | [http://localhost:4000/api-docs](https://battery-passport-backend.onrender.com/api-docs) |
+| Passport Service | [http://localhost:4001/api-docs](https://passport-service.onrender.com/api-docs) |
+| Document Service | [http://localhost:4002/api-docs](https://document-service-coxt.onrender.com/api-docs) |
 
 ---
 
+
+## 📄 Swagger API Docs Render Urls
+
+| Service          | Swagger UI                                                       |
+| ---------------- | ---------------------------------------------------------------- |
+| Auth Service     | [https://battery-passport-backend.onrender.com/api-docs](https://battery-passport-backend.onrender.com/api-docs) |
+| Passport Service | [https://passport-service.onrender.com/api-docs](https://passport-service.onrender.com/api-docs) |
+| Document Service | [https://document-service-coxt.onrender.com/api-docs](https://document-service-coxt.onrender.com/api-docs) |
+
+---
 ## 🔐 Authentication Flow
 
 * **Register/Login** to get a JWT token
