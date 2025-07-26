@@ -1375,7 +1375,7 @@
 		},
 		{
 			"key": "TOKEN",
-			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODRhZTc5OGRiMTBkYTg1M2JhZTkwMyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1MzU1NTIyNSwiZXhwIjoxNzUzNTU4ODI1fQ.LcR8wB1bGTSH57ToW6lgFJJT69JvEHfCcfsVHXGes0w",
+			"value": "{{TOKEN}}",
 			"type": "string"
 		}
 	]
